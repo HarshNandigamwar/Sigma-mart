@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import Cart from "../../assets/cart.png";
@@ -6,20 +6,21 @@ import Menu from "../../assets/menu.png";
 import SearchImg from "../../assets/search.png";
 
 function Header() {
-  const menuIcon = document.querySelector(".menu");
-  const Hamburger = document.querySelector(".Hamburgerbody");
-  const inputFild = document.querySelector(".input");
+  const [showMenu,setShowMenu] = useState(false);
+  // const menuIcon = document.querySelector(".menu");
+  // const Hamburger = document.querySelector(".Hamburgerbody");
+  // const inputFild = document.querySelector(".input");
 
-  const menuOpen = () => {
-    menuIcon.style.display = "none";
-    Hamburger.style.display = "block";
-    inputFild.style.display = "none";
-  };
-  const menuClose = () => {
-    menuIcon.style.display = "block";
-    Hamburger.style.display = "none";
-    inputFild.style.display = "block";
-  };
+  // const menuOpen = () => {
+  //   menuIcon.style.display = "none";
+  //   Hamburger.style.display = "block";
+  //   inputFild.style.display = "none";
+  // };
+  // const menuClose = () => {
+  //   menuIcon.style.display = "block";
+  //   Hamburger.style.display = "none";
+  //   inputFild.style.display = "block";
+  // };
   return (
     <header className="header">
       <div className="headerDiv">
@@ -39,30 +40,30 @@ function Header() {
           </div>
         </NavLink>
 
-        <div className="menu" onClick={menuOpen}>
+        <div className="menu" onClick={() => setShowMenu(!showMenu)}>
           <img className="menuImg" src={Menu} />
         </div>
 
-        <div className="Hamburger">
-          <div className="Hamburgerbody">
+        <div className="Hamburger"  >
+          <div className="Hamburgerbody"style ={{display:showMenu ? "flex":"none"}}>
             <NavLink to={"/"} className="Navlink">
-              <li onClick={menuClose}>Home</li>
+              <li onClick={() => setShowMenu(false)}>Home</li>
             </NavLink>
 
             <NavLink to={"/categories"} className="Navlink">
-              <li onClick={menuClose}>Categories</li>
+              <li onClick={() => setShowMenu(false)}>Categories</li>
             </NavLink>
 
             <NavLink to={"/cart"} className="Navlink">
-              <li onClick={menuClose}>Cart</li>
+              <li onClick={() => setShowMenu(false)}>Cart</li>
             </NavLink>
 
             <NavLink to={"/order"} className="Navlink">
-              <li onClick={menuClose}>Order</li>
+              <li onClick={() => setShowMenu(false)}>Order</li>
             </NavLink>
 
             <NavLink to={"/about"} className="Navlink">
-              <li onClick={menuClose}>About Us</li>
+              <li onClick={() => setShowMenu(false)}>About Us</li>
             </NavLink>
           </div>
         </div>

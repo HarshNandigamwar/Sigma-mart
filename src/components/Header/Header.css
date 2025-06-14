@@ -2,19 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .headerDiv {
+  background: #ff9550;
+  height: 3rem;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 1rem 2rem;
   display: flex;
-  background-color: #ff9550;
-  height: 40px;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 .logo {
   margin-left: 10px;
   font-size: 30px;
   font: 300;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .input {
   margin-left: auto;
@@ -24,7 +31,7 @@
 }
 .input > input {
   height: 25px;
-  width: 350px;
+  width: 550px;
   border: none;
   border-radius: 6px 6px 6px 6px;
   padding-left: 5px;
@@ -62,7 +69,7 @@
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  margin: 1px;
+  margin-bottom: 1px;
   color: #ff0000;
 }
 .cartImg {
@@ -76,20 +83,17 @@
   margin-right: 10px;
   cursor: pointer;
 }
-.Hamburger {
-  height: 100vh;
-  background-color: #ff9550;
-  border-radius: 10px 10px 0px;
-}
 .Hamburgerbody {
   display: flex;
   flex-direction: column;
-  margin-top: 430px;
-  padding: 20px;
+  background-color: #ff9550;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 470px;
   width: 250px;
   display: none;
-  position: relative;
   z-index: 2;
+  height: fit-content;
+  margin-left: -260px;
 }
 .Navlink {
   text-decoration: none;
@@ -100,26 +104,79 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 35px;
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #faf3e0;
   cursor: pointer;
   color: #ffffff;
   text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #0000004d;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 li:hover {
-  background-color: #865331b9;
-  color: #ffffff;
+  color: #000000;
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #faf3e0;
 }
 @media screen and (max-width: 840px) {
   .logo {
-    font-size: 25px;
+    font-size: 18px;
   }
   .input > input {
-    width: 170px;
+    width: 135px;
   }
   .cart {
     display: none;
+  }
+  .headerDiv {
+    padding: 0;
+  }
+}
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #faf3e0;
+  margin: 0;
+  overflow: hidden;
+}
+.slider-container {
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+}
+.slider-wrapper {
+  display: flex;
+  width: 500%;
+  animation: slideAnimation 10s infinite alternate ease-in-out;
+}
+.slider-wrapper img {
+  width: 20%;
+  height: 10%;
+  object-fit: cover;
+}
+/* Keyframe animation for sliding */
+@keyframes slideAnimation {
+  0%,
+  16% {
+    transform: translateX(0%); /* Show first image */
+  }
+  20%,
+  36% {
+    transform: translateX(-20%); /* Slide to second image */
+  }
+  40%,
+  56% {
+    transform: translateX(-40%); /* Slide to third image */
+  }
+  60%,
+  76% {
+    transform: translateX(-60%); /* Slide to fourth image */
+  }
+  80%,
+  100% {
+    transform: translateX(-80%); /* Slide to fifth image */
   }
 }
