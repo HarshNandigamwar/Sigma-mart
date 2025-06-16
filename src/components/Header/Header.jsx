@@ -3,10 +3,9 @@ import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import Cart from "../../assets/cart.png";
 import Menu from "../../assets/menu.png";
-import SearchImg from "../../assets/search.png";
 
 function Header() {
-  const [showMenu,setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <header className="header">
@@ -15,9 +14,9 @@ function Header() {
 
         <div className="input">
           <input type="text" placeholder="Search..." />
-          <button className="searchbtn">
-            <img className="searchImg" src={SearchImg} />
-          </button>
+          <span className="searchbtn ">
+            <i className="fa-solid fa-magnifying-glass ml-2 cursor-pointer"></i>
+          </span>
         </div>
 
         <NavLink to={"/cart"} className="Navlink">
@@ -31,26 +30,39 @@ function Header() {
           <img className="menuImg" src={Menu} />
         </div>
 
-        <div className="Hamburger"  >
-          <div className="Hamburgerbody"style ={{display:showMenu ? "flex":"none"}}>
+        <div className="Hamburger">
+          <div
+            className="Hamburgerbody"
+            style={{ display: showMenu ? "flex" : "none" }}
+          >
             <NavLink to={"/"} className="Navlink">
-              <li className="li" onClick={() => setShowMenu(false)}>Home</li>
+              <li className="li" onClick={() => setShowMenu(false)}>
+                Home
+              </li>
             </NavLink>
 
             <NavLink to={"/categories"} className="Navlink">
-              <li className="li" onClick={() => setShowMenu(false)}>Categories</li>
+              <li className="li" onClick={() => setShowMenu(false)}>
+                Categories
+              </li>
             </NavLink>
 
             <NavLink to={"/cart"} className="Navlink">
-              <li className="li" onClick={() => setShowMenu(false)}>Cart</li>
+              <li className="li" onClick={() => setShowMenu(false)}>
+                Cart
+              </li>
             </NavLink>
 
             <NavLink to={"/order"} className="Navlink">
-              <li className="li" onClick={() => setShowMenu(false)}>Order</li>
+              <li className="li" onClick={() => setShowMenu(false)}>
+                Order
+              </li>
             </NavLink>
 
             <NavLink to={"/about"} className="Navlink">
-              <li className="li" onClick={() => setShowMenu(false)}>About Us</li>
+              <li className="li" onClick={() => setShowMenu(false)}>
+                About Us
+              </li>
             </NavLink>
           </div>
         </div>
