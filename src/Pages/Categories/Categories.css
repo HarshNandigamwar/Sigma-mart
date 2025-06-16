@@ -1,21 +1,22 @@
-.categoriesPage{
-    width: 100vw;
+.categoriesPage {
+  width: 100vw;
 }
-.categoriesH1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.categoriesH1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.headingDiv{
-    margin-top: 10px;
+.headingDiv {
+  margin-top: 10px;
 }
 .categoriesCard {
-    margin-bottom: 20px;
-    transition: 0.3s;
-    box-shadow: 0 0 10px #0000004d;
-    padding: 10px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #0000004d;
+  padding: 10px;
 }
-.categoriesCard:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 0 10px #ff9550;
+.categoriesCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff9550;
 }
-
-
+.Font {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
