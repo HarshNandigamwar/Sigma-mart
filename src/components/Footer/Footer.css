@@ -1,15 +1,24 @@
-.footer{
-    /* color: #ffffff; */
-    /* padding-left: 30px; */
-    /* padding-right: 30px; */
-    /* height: auto; */
-    /* background-color: #ff9550; */
+.FooterPage{
+    padding: 20px;
+    color: white;
 }
-.footerbody{
-    /* margin-top: auto; */
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* gap: 8; */
-    /* padding-top: 20px; */
-    /* flex-direction: column; */
+.mainH1{
+    margin-bottom: 10px;
 }
+.footerH1{
+    margin: 10px;
+}
+.icon{
+    margin-left: 20px;
+}
+p,h2{
+    margin: 10px;
+}
+.copyDiv{
+ 
+    margin-top: 8px;
+    padding-top: 8px;
+}
+
+
+

@@ -98,7 +98,7 @@
 .Navlink {
   text-decoration: none;
 }
-li {
+.li {
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -115,7 +115,7 @@ li {
   box-shadow: 0 0 10px #0000004d;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-li:hover {
+.li:hover {
   color: #000000;
   transform: translateY(-5px);
   box-shadow: 0 0 10px #faf3e0;
@@ -132,51 +132,5 @@ li:hover {
   }
   .headerDiv {
     padding: 0;
-  }
-}
-.body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #faf3e0;
-  margin: 0;
-  overflow: hidden;
-}
-.slider-container {
-  overflow: hidden;
-  position: relative;
-  height: 300px;
-}
-.slider-wrapper {
-  display: flex;
-  width: 500%;
-  animation: slideAnimation 10s infinite alternate ease-in-out;
-}
-.slider-wrapper img {
-  width: 20%;
-  height: 10%;
-  object-fit: cover;
-}
-/* Keyframe animation for sliding */
-@keyframes slideAnimation {
-  0%,
-  16% {
-    transform: translateX(0%); /* Show first image */
-  }
-  20%,
-  36% {
-    transform: translateX(-20%); /* Slide to second image */
-  }
-  40%,
-  56% {
-    transform: translateX(-40%); /* Slide to third image */
-  }
-  60%,
-  76% {
-    transform: translateX(-60%); /* Slide to fourth image */
-  }
-  80%,
-  100% {
-    transform: translateX(-80%); /* Slide to fifth image */
   }
 }

@@ -1,0 +1,12 @@
+.CardPage{
+    padding: 10px;
+    transition: 0.3s;
+  box-shadow: 0 0 10px #0000004d;
+}
+.CardPage:hover{
+    transform: translateY(-5px);
+  box-shadow: 0 0 10px #faf3e0;
+}
+.btnDiv{
+    margin-top: 10px;
+}

@@ -1,36 +1,129 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Home.css";
-import Img1 from '../../assets/img1.jpg'
-import Img2 from '../../assets/img2.jpg'
-import Img3 from '../../assets/img3.jpg'
-import Img4 from '../../assets/img4.jpg'
-import Img5 from '../../assets/img5.jpg'
-import productCard from '../../components/Card/Card'
+import ImgSlid from "../../components/ImgSlid/ImgSlid";
+import ProductCard from "../../components/Card/Card";
 
 function Home() {
+  const [phones, setphones] = useState([]);
+  const [shirts, setshirts] = useState([]);
+  const [laptops, setlaptops] = useState([]);
+  const [beautys, setbeautys] = useState([]);
+
+  // Fetching phones
+
+  // useEffect(() => {
+  //   fetch("https://dummyjson.com/products/category/smartphones")
+  //   .then((res) => res.json())
+  //   .then((data) => setphones(data.products));
+  // }, []);
+
+  // Fetching shirt
+
+  // useEffect(() => {
+  //   fetch("https://dummyjson.com/products/category/mens-shirts")
+  //   .then((res) => res.json())
+  //   .then((data) => setshirts(data.products));
+  // }, []);
+
+  // Fetching laptops
+
+  // useEffect(() => {
+  //   fetch("https://dummyjson.com/products/category/laptops")
+  //   .then((res) => res.json())
+  //   .then((data) => setlaptops(data.products));
+  // }, []);
+
+  // Fetching beauty
+
+  // useEffect(() => {
+  //   fetch("https://dummyjson.com/products/category/beauty")
+  //   .then((res) => res.json())
+  //   .then((data) => setbeautys(data.products));
+  // }, []);
+
   return (
+    <div className="HomePage bg-yellow-500">
+      <ImgSlid />
+      <div className=" bg-yellow-50 mainBody">
+        <div>
+          <h1 className="productHeading text-center text-3xl font-bold">
+            Premium Mobile Phones
+          </h1>
+          <hr />
+          <div className=" w-full grid gap-y-2 gap-x-1 md:gap-5 xl:gap-10 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center">
+            {/* Display phone   */}
+            {phones.map((phone) => (
+              <ProductCard
+                key={phone.id}
+                image={phone.thumbnail}
+                productTitle={phone.title}
+                price={Math.floor(phone.price * 83)}
+                discount={phone.discountPercentage}
+              />
+            ))}
+          </div>
 
+          <h1 className="productHeading text-center text-3xl font-bold">
+            {" "}
+            Trending Laptops
+          </h1>
+          <hr />
+          <div className=" w-full grid gap-y-2 gap-x-1 md:gap-5 xl:gap-10 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center">
+            {/* Display laptops   */}
+            {laptops.map((laptop) => (
+              <ProductCard
+                key={laptop.id}
+                image={laptop.thumbnail}
+                productTitle={laptop.title}
+                price={Math.floor(laptop.price * 83)}
+                discount={laptop.discountPercentage}
+              />
+            ))}
+          </div>
 
-  <>
-  {/* animation sliding  */}
-<div class="body">
-    <div class="slider-container">
-        <div class="slider-wrapper">
-           
-            <img src={Img1} alt="Image 1"/>
-            <img src={Img4} alt="Image 2"/>
-            <img src={Img3}alt="Image 3"/>
-            <img src={Img2}alt="Image 4"/>
-            <img src={Img5}alt="Image 5"/>
+          <h1 className="productHeading text-center text-3xl font-bold">
+            {" "}
+            Exclusive Shirts
+          </h1>
+          <hr />
+          <div className=" w-full grid gap-y-2 gap-x-1 md:gap-5 xl:gap-10 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center">
+            {/* Display shirt   */}
+
+            {shirts.map((shirt) => (
+              <ProductCard
+                key={shirt.id}
+                image={shirt.thumbnail}
+                productTitle={shirt.title}
+                price={Math.floor(shirt.price * 83)}
+                discount={shirt.discountPercentage}
+              />
+            ))}
+          </div>
+
+          <h1 className="productHeading text-center text-3xl font-bold">
+            {" "}
+            Beauty Products
+          </h1>
+          <hr />
+          <div className=" w-full grid gap-y-2 gap-x-1 md:gap-5 xl:gap-10 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center">
+            {/* Display beauty   */}
+
+            {beautys.map((beauty) => (
+              <ProductCard
+                key={beauty.id}
+                image={beauty.thumbnail}
+                productTitle={beauty.title}
+                price={Math.floor(beauty.price * 83)}
+                discount={beauty.discountPercentage}
+              />
+            ))}
+          </div>
         </div>
+      </div>
     </div>
-</div>
-  
-
-  
-  </>
-  )
-  
+  );
 }
 
 export default Home;
