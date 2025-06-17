@@ -15,36 +15,42 @@ function Home() {
 
   useEffect(() => {
     fetch("https://dummyjson.com/products/category/smartphones")
-    .then((res) => res.json())
-    .then((data) => setphones(data.products));
+      .then((res) => res.json())
+      .then((data) => setphones(data.products));
   }, []);
 
   // Fetching shirt
 
   useEffect(() => {
     fetch("https://dummyjson.com/products/category/mens-shirts")
-    .then((res) => res.json())
-    .then((data) => setshirts(data.products));
+      .then((res) => res.json())
+      .then((data) => setshirts(data.products));
   }, []);
 
   // Fetching laptops
 
   useEffect(() => {
     fetch("https://dummyjson.com/products/category/laptops")
-    .then((res) => res.json())
-    .then((data) => setlaptops(data.products));
+      .then((res) => res.json())
+      .then((data) => setlaptops(data.products));
   }, []);
 
   // Fetching beauty
 
   useEffect(() => {
     fetch("https://dummyjson.com/products/category/beauty")
-    .then((res) => res.json())
-    .then((data) => setbeautys(data.products));
+      .then((res) => res.json())
+      .then((data) => setbeautys(data.products));
   }, []);
 
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    navigate(`/product/${id}`);
+  };
+
   return (
-    <div className="HomePage bg-yellow-500">
+    <div id="body" className="HomePage bg-yellow-500">
       <ImgSlid />
       <div className=" bg-yellow-50 mainBody">
         <div>
@@ -61,6 +67,7 @@ function Home() {
                 productTitle={phone.title}
                 price={Math.floor(phone.price * 83)}
                 discount={phone.discountPercentage}
+                onClick={() => handleClick("smartphones", phone.id)}
               />
             ))}
           </div>
@@ -117,6 +124,7 @@ function Home() {
                 productTitle={beauty.title}
                 price={Math.floor(beauty.price * 83)}
                 discount={beauty.discountPercentage}
+                onClick={() => handleClick(beauty.id)}
               />
             ))}
           </div>

@@ -24,6 +24,7 @@ import Shoes from "./Pages/CategoriesDetail/ShoesDetail.jsx";
 import Skincare from "./Pages/CategoriesDetail/SkincareDetail.jsx";
 import Sunglass from "./Pages/CategoriesDetail/SunglassDetail.jsx";
 import Tops from "./Pages/CategoriesDetail/TopsDetail.jsx";
+import ProductDetail from "./Pages/ProductDetail/ProductDetail.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
@@ -41,7 +42,7 @@ const router = createBrowserRouter(
       <Route path="watchdetail" element={<Watch />} />
       <Route path="beautybedetail" element={<Beauty />} />
       <Route path="furnituredetail" element={<Furniture />} />
-
+<Route path="/product/:id" element={<ProductDetail/>} />
       <Route path="order" element={<Order />} />
     </Route>
   )

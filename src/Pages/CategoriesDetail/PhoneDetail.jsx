@@ -3,7 +3,7 @@ import "./CategoriesDetail.css"
 const PhoneDetail
  = () => {
   return (
-    <div>
+    <div id='body'>
       Phone
       <p className='lolo'>gggg</p>
     </div>

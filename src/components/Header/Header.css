@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
 .headerDiv {
   background: #ff9550;
   height: 3rem;
@@ -18,41 +22,21 @@
   z-index: 3;
 }
 .logo {
-  margin-left: 10px;
-  font-size: 30px;
-  font: 300;
+  margin-left: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.inputbg {
+  margin-left: 10px;
+}
+.inputDiv {
+  margin-right: 20px;
+}
 .input {
-  margin-left: auto;
-  position: relative;
-  z-index: 1;
-  margin-right: 10px;
-  padding: 1px;
+  padding-left: 10px;
+  outline: none;
 }
-.input > input {
-  height: 26px;
-  width: 550px;
-  border: none;
-  border-radius: 6px 0px 0px 6px;
-  padding-left: 5px;
-
-  background-color: #faf3e0;
-}
-.searchbtn {
-  height: 25px;
-  /* width: 35px; */
-  border: none;
-  border-radius: 0px 6px 6px 0px;
-  margin-top: 1px;
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-  background-color: #ee930c;
-  cursor: pointer;
-}
-.searchImg {
-  height: 13px;
+.btn {
+  margin-left: 10px;
 }
 .cart {
   display: flex;
@@ -121,15 +105,21 @@
   transform: translateY(-5px);
   box-shadow: 0 0 10px #faf3e0;
 }
+
 @media screen and (max-width: 840px) {
   .logo {
+    margin-left: 5px;
     font-size: 18px;
   }
-  .input > input {
-    width: 135px;
+  .inputbg {
+    margin-left: 8px;
+    width: 49vw;
   }
   .cart {
     display: none;
+  }
+  .menu {
+    margin-left: 1px;
   }
   .headerDiv {
     padding: 0;

@@ -1,8 +1,8 @@
 import React from 'react'
-
+import "./Order.css"
 function Order() {
   return (
-    <div>
+    <div id='body'>
       This is Order section
     </div>
   )

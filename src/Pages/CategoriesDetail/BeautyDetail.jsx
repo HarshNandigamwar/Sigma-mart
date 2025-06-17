@@ -3,7 +3,7 @@ import "./CategoriesDetail.css"
 
 const BeautyDetail = () => {
   return (
-    <div>
+    <div id='body'>
       Beauty 
     </div>
   )

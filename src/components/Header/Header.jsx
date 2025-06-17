@@ -10,13 +10,18 @@ function Header() {
   return (
     <header className="header">
       <div className="headerDiv">
-        <div className="logo">{"SigmaMart"}</div>
+        <div className="logo font-bold text-2xl  ">SigmaMart</div>
 
-        <div className="input">
-          <input type="text" placeholder="Search..." />
-          <span className="searchbtn ">
-            <i className="fa-solid fa-magnifying-glass ml-2 cursor-pointer"></i>
-          </span>
+        <div className="inputDiv flex items-center gap-5 mr-5 lg:gap-15">
+          <li className="inputbg flex bg-amber-600 text-black items-center w-[46vw] md:w-[45vw] xl:w-[43vw] sm:w-[20vw] rounded-[6px]">
+            <input
+              className="input flex bg-white w-[40vw] h-9 rounded-l-[6px] px-2 text-[18px] lg:text-xl"
+              type="text"
+              placeholder="Search..."
+            />
+
+            <i className="fa-solid fa-magnifying-glass btn ml-2 text-xl cursor-pointer "></i>
+          </li>
         </div>
 
         <NavLink to={"/cart"} className="Navlink">

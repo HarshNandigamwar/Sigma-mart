@@ -7,9 +7,7 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  // fetch("https://fakestoreapi.com/products")
-  // .then((res) => res.json())
-  // .then((data) => console.log(data))
+
   
   
 

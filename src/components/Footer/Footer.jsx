@@ -4,10 +4,10 @@ import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="FooterPage w-[100vw] bg-gray-800">
+    <footer id="body" className="FooterPage w-[100vw] bg-[#ff9550]">
       <div className="footerH1">
-        <h1 className=" mainH1 text-white text-4xl font-bold">SigmaMart</h1>
-        <h2 className="text-white">Shop Smart, Shop Easy.</h2>
+        <h1 className=" mainH1 text-black text-4xl font-bold">SigmaMart</h1>
+        <h2 className="text-black">Shop Smart, Shop Easy.</h2>
         <h2>Bringing Quality to Your Doorstap.</h2>
 
         <h1 className=" text-2xl font-bold">Customer service</h1>
@@ -19,7 +19,7 @@ function Footer() {
           <p>Order Tracking</p>
         </NavLink>
 
-        <h1 className=" text-2xl font-bold text-white">Contact Me </h1>
+        <h1 className=" text-2xl font-bold text-black">Contact Me </h1>
         <p>
           <ul>
             <li>
@@ -61,7 +61,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className=" copyDiv text-center mt-8 border-t border-[#ff9550] pt-4">
+      <div className=" copyDiv text-center mt-8 border-t border-[#000000] pt-4">
         &#169; {new Date().getFullYear()} SigmaMart. All Rights Reserved.
       </div>
     </footer>

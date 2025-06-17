@@ -2,7 +2,7 @@ import React from 'react'
 import "./CategoriesDetail.css"
 const TopsDetail = () => {
   return (
-    <div>
+    <div id='body'>
       tops
     </div>
   )

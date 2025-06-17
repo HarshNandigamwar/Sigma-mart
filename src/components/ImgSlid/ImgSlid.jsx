@@ -7,7 +7,7 @@ import Img4 from "../../assets/img4.jpg";
 import Img5 from "../../assets/img5.jpg";
 const ImgSlid = () => {
   return (
-    <div>
+    <div id='body'>
             <div class="body">
         <div class="slider-container">
           <div class="slider-wrapper">

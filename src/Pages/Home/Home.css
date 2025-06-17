@@ -1,14 +1,17 @@
-.mainBody{
+#body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+.mainBody {
   padding: 10px;
 }
-.cardDiv{
+.cardDiv {
   padding: 5px;
 }
-.productHeading{
+.productHeading {
   margin-bottom: 10px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-hr{
+hr {
   margin-bottom: 10px;
 }
-

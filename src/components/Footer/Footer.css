@@ -1,24 +1,25 @@
-.FooterPage{
-    padding: 20px;
-    color: white;
+#body {
+  width: 100vw;
+  overflow-x: hidden;
 }
-.mainH1{
-    margin-bottom: 10px;
+.FooterPage {
+  padding: 20px;
+  color: black;
 }
-.footerH1{
-    margin: 10px;
+.mainH1 {
+  margin-bottom: 10px;
 }
-.icon{
-    margin-left: 20px;
+.footerH1 {
+  margin: 10px;
 }
-p,h2{
-    margin: 10px;
+.icon {
+  margin-left: 20px;
 }
-.copyDiv{
- 
-    margin-top: 8px;
-    padding-top: 8px;
+p,
+h2 {
+  margin: 10px;
 }
-
-
-
+.copyDiv {
+  margin-top: 8px;
+  padding-top: 8px;
+}

@@ -1,0 +1,62 @@
+.mainDiv {
+  margin-top: 20px;
+}
+.item {
+  transition: 0.3s;
+}
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #faf3e0;
+}
+.name {
+  margin-top: 30px;
+}
+.container {
+  margin-top: 10px;
+  padding: 20px;
+}
+.information {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.rating {
+  padding: 5px;
+}
+.DetailInfo {
+  margin-top: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 20px;
+}
+.Buttons {
+  margin-left: 20px;
+  transition: 0.3s;
+}
+.Buttons:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #faf3e0;
+}
+.Bone {
+  transition: 0.3s;
+}
+.Bone:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #faf3e0;
+}
+
+@media screen and (max-width: 840px) {
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .mainImg {
+    width: 200px;
+  }
+  .container {
+    justify-content: center;
+    gap: 10px;
+  }
+  .item {
+    width: 90px;
+  }
+}

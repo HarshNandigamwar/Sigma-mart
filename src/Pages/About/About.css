@@ -1,0 +1,12 @@
+#body {
+  width: 100vw;
+  overflow-x: hidden;
+  padding: 20px;
+}
+.heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.para {
+  margin-bottom: 16px;
+}

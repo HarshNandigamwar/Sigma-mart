@@ -2,7 +2,7 @@ import React from 'react'
 import "./CategoriesDetail.css"
 const FurnitureDetail = () => {
   return (
-    <div>
+    <div id='body'>
       Furniture
     </div>
   )

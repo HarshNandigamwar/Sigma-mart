@@ -2,7 +2,7 @@ import React from 'react'
 import "./CategoriesDetail.css"
 const ShoesDetail = () => {
   return (
-    <div>
+    <div id='body'>
       Shoes
     </div>
   )
