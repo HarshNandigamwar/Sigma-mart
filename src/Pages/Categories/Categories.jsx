@@ -3,13 +3,11 @@ import "./Categories.css";
 import { NavLink } from "react-router-dom";
 
 function Categories() {
-
-
   return (
-    <div id="body">
+    <div>
       <div
         className=" categoriesPage mt-15  flex flex-col items-center gap-5 lg:gap-10 px-5 pb-20
-             bg-[#dadada] text-black"
+              text-black"
       >
         <div className="headingDiv">
           <h1 className=" categoriesH1 font-bold text-4xl p-3 md:text-5xl lg:text-6xl ">
@@ -18,7 +16,6 @@ function Categories() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 items-center gap-5 xl:gap-10">
-
           <NavLink to={"/phonedetail"}>
             <div className=" categoriesCard cards h-auto w-[40vw] md:w-[20vw] border-2 border-gray-400  cursor-pointer xl:w-55 flex flex-col items-center gap-3 xl:gap-4 rounded-xl bg-amber-600 text-black ">
               <div className="bg-[#ff9550] w-full flex items-center justify-center h-[100px] rounded-2xl ">

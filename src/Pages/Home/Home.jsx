@@ -50,7 +50,7 @@ function Home() {
   };
 
   return (
-    <div id="body" className="HomePage bg-yellow-500">
+    <div  className="HomePage ">
       <ImgSlid />
       <div className=" bg-yellow-50 mainBody">
         <div>
@@ -67,7 +67,7 @@ function Home() {
                 productTitle={phone.title}
                 price={Math.floor(phone.price * 83)}
                 discount={phone.discountPercentage}
-                onClick={() => handleClick("smartphones", phone.id)}
+                onClick={() => handleClick(phone.id)}
               />
             ))}
           </div>
@@ -86,6 +86,7 @@ function Home() {
                 productTitle={laptop.title}
                 price={Math.floor(laptop.price * 83)}
                 discount={laptop.discountPercentage}
+                onClick={() => handleClick(laptop.id)}
               />
             ))}
           </div>
@@ -105,6 +106,7 @@ function Home() {
                 productTitle={shirt.title}
                 price={Math.floor(shirt.price * 83)}
                 discount={shirt.discountPercentage}
+                onClick={() => handleClick(shirt.id)}
               />
             ))}
           </div>
