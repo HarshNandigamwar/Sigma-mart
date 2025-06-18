@@ -25,6 +25,7 @@ import Skincare from "./Pages/CategoriesDetail/SkincareDetail.jsx";
 import Sunglass from "./Pages/CategoriesDetail/SunglassDetail.jsx";
 import Tops from "./Pages/CategoriesDetail/TopsDetail.jsx";
 import ProductDetail from "./Pages/ProductDetail/ProductDetail.jsx";
+import Loader from "./components/Loader/Loader.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>

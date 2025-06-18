@@ -1,3 +1,7 @@
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
 .mainDiv {
   margin-top: 20px;
 }
@@ -45,7 +49,11 @@
 }
 
 @media screen and (max-width: 840px) {
-  body {
+  .DetailInfo {
+    width: 430px;
+    margin-left: -17px;
+  }
+  .ProductDetailBody {
     width: 100vw;
     overflow-x: hidden;
   }
@@ -58,5 +66,16 @@
   }
   .item {
     width: 90px;
+  }
+  .price {
+    margin-bottom: 10px;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .item img {
+    height: 90px;
   }
 }
