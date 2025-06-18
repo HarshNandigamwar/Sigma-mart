@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Header.css";
 import Cart from "../../assets/cart.png";
 import Menu from "../../assets/menu.png";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
+  let [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate();
+
+  function searchClick() {
+    navigate(`/categoriesDetail/${inputValue}`);
+  }
 
   return (
     <header className="header">
@@ -18,9 +24,13 @@ function Header() {
               className="input flex bg-white w-[40vw] h-9 rounded-l-[6px] px-2 text-[18px] lg:text-xl"
               type="text"
               placeholder="Search..."
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
             />
-
-            <i className="fa-solid fa-magnifying-glass btn ml-2 text-xl cursor-pointer "></i>
+            <i
+              className="fa-solid fa-magnifying-glass btn ml-2 text-xl cursor-pointer "
+              onClick={searchClick}
+            ></i>
           </li>
         </div>
 

@@ -8,6 +8,10 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+.header{
+  top: 0;
+  position: sticky;
+}
 .headerDiv {
   background: #ff9550;
   height: 3rem;

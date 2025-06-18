@@ -27,6 +27,16 @@ const ProductDetail = () => {
       ? "bg-yellow-300"
       : "bg-red-600";
 
+  function Mypage() {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }),
+      [];
+  }
+  setTimeout(() => {
+    Mypage();
+  }, 1000);
+
   return (
     <>
       {loading ? (
