@@ -11,13 +11,16 @@ const BeautyDetail = () => {
   const { categorie } = useParams();
   const [details, setdetails] = useState([]);
 
-
   useEffect(() => {
     fetch(`https://dummyjson.com/products/category/${categorie}`)
       .then((res) => res.json())
       .then((data) => {
         setdetails(data.products);
         setloadingone(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching product:", err);
+        setnotfound(true);
       });
   }, []);
 
@@ -25,9 +28,6 @@ const BeautyDetail = () => {
   const handleClick = (id) => {
     navigate(`/product/${id}`);
   };
-
-
-
 
   return (
     <>

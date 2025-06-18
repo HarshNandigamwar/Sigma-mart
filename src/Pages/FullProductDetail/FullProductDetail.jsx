@@ -3,7 +3,7 @@ import ProductDetail from "../ProductDetail/ProductDetail"
 const FullProductDetail = () => {
   return (
     <div>
-      fullProductDetail
+    
       <ProductDetail/>
     </div>
   )
