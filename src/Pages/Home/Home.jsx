@@ -15,48 +15,48 @@ function Home() {
 
   // Fetching phones
 
-  // useEffect(() => {
-  //   fetch("https://dummyjson.com/products/category/smartphones")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setphones(data.products);
-  //       setloadingone(false);
-  //     })
-  //     .catch((err) => {
-  //       console.error("Error fetching product:", err);
-  //       setloadingone(false);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch("https://dummyjson.com/products/category/smartphones")
+      .then((res) => res.json())
+      .then((data) => {
+        setphones(data.products);
+        setloadingone(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching product:", err);
+        setloadingone(false);
+      });
+  }, []);
 
   // Fetching shirt
 
-  // useEffect(() => {
-  //   fetch("https://dummyjson.com/products/category/mens-shirts")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setshirts(data.products);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch("https://dummyjson.com/products/category/mens-shirts")
+      .then((res) => res.json())
+      .then((data) => {
+        setshirts(data.products);
+      });
+  }, []);
 
   // Fetching laptops
 
-  // useEffect(() => {
-  //   fetch("https://dummyjson.com/products/category/laptops")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setlaptops(data.products);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch("https://dummyjson.com/products/category/laptops")
+      .then((res) => res.json())
+      .then((data) => {
+        setlaptops(data.products);
+      });
+  }, []);
 
   // Fetching beauty
 
-  // useEffect(() => {
-  //   fetch("https://dummyjson.com/products/category/beauty")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setbeautys(data.products);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch("https://dummyjson.com/products/category/beauty")
+      .then((res) => res.json())
+      .then((data) => {
+        setbeautys(data.products);
+      });
+  }, []);
 
   const navigate = useNavigate();
 
