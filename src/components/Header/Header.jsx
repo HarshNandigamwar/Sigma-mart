@@ -10,12 +10,14 @@ function Header() {
   const navigate = useNavigate();
 
   function searchClick() {
+    // Input value forward to the categoriesdetail section.
     navigate(`/categoriesDetail/${inputValue}`);
   }
 
   return (
     <header className="header">
       <div className="headerDiv">
+        {/* Sigma mart LOGO */}
         <div className="logo font-bold text-2xl  ">SigmaMart</div>
 
         <div className="inputDiv flex items-center gap-5 mr-5 lg:gap-15">
@@ -25,55 +27,62 @@ function Header() {
               type="text"
               placeholder="Search..."
               value={inputValue}
+              // Targeting input value
               onChange={(e) => setInputValue(e.target.value)}
             />
             <i
               className="fa-solid fa-magnifying-glass btn ml-2 text-xl cursor-pointer "
+              // Search function run after click
               onClick={searchClick}
             ></i>
           </li>
         </div>
 
+        {/* Forward to Cart page */}
         <NavLink to={"/cart"} className="Navlink">
           <div className="cart">
             <img className="cartImg" src={Cart} />
+            {/* Cart item number display */}
             Cart <p className="cartNum">0</p>
           </div>
         </NavLink>
-
+        {/* Side menu open after click */}
         <div className="menu" onClick={() => setShowMenu(!showMenu)}>
+          {/* side menu icon */}
           <img className="menuImg" src={Menu} />
         </div>
 
         <div className="Hamburger">
+          {/* Side menu display or not */}
           <div
             className="Hamburgerbody"
             style={{ display: showMenu ? "flex" : "none" }}
           >
+            {/* Forward to home page */}
             <NavLink to={"/"} className="Navlink">
               <li className="li" onClick={() => setShowMenu(false)}>
                 Home
               </li>
             </NavLink>
-
+            {/* Forward to categories page */}
             <NavLink to={"/categories"} className="Navlink">
               <li className="li" onClick={() => setShowMenu(false)}>
                 Categories
               </li>
             </NavLink>
-
+            {/* Forward to cart page */}
             <NavLink to={"/cart"} className="Navlink">
               <li className="li" onClick={() => setShowMenu(false)}>
                 Cart
               </li>
             </NavLink>
-
+            {/* Forward to order page */}
             <NavLink to={"/order"} className="Navlink">
               <li className="li" onClick={() => setShowMenu(false)}>
                 Order
               </li>
             </NavLink>
-
+            {/* Forward to about page */}
             <NavLink to={"/about"} className="Navlink">
               <li className="li" onClick={() => setShowMenu(false)}>
                 About Us

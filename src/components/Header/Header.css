@@ -8,9 +8,9 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
-.header{
+.header {
   top: 0;
-  position: sticky;
+  /* position: sticky; */
 }
 .headerDiv {
   background: #ff9550;
@@ -23,7 +23,7 @@ body {
   justify-content: space-between;
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 4;
 }
 .logo {
   margin-left: 20px;
@@ -80,7 +80,7 @@ body {
   margin-top: 470px;
   width: 250px;
   display: none;
-  z-index: 2;
+  z-index: 3;
   height: fit-content;
   margin-left: -260px;
 }

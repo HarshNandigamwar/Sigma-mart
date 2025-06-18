@@ -1,26 +1,29 @@
-import React from 'react'
-import "./ImgSlid.css"
+import React from "react";
+import "./ImgSlid.css";
+// Import all images
 import Img1 from "../../assets/img1.jpg";
 import Img2 from "../../assets/img2.jpg";
 import Img3 from "../../assets/img3.jpg";
 import Img4 from "../../assets/img4.jpg";
-import Img5 from "../../assets/img5.jpg";
 const ImgSlid = () => {
   return (
-    <div id='body'>
-            <div class="body">
-        <div class="slider-container">
-          <div class="slider-wrapper">
-            <img src={Img1} alt="Image 1" />
-            <img src={Img4} alt="Image 2" />
-            <img src={Img3} alt="Image 3" />
-            <img src={Img2} alt="Image 4" />
-            <img src={Img5} alt="Image 5" />
-          </div>
+    <div className="slider">
+      <figure>
+        <div className="slide">
+          <img src={Img1} alt="" />
         </div>
-      </div>
+        <div className="slide">
+          <img src={Img2} alt="" />
+        </div>
+        <div className="slide">
+          <img src={Img3} alt="" />
+        </div>
+        <div className="slide">
+          <img src={Img4} alt="" />
+        </div>
+      </figure>
     </div>
-  )
-}
+  );
+};
 
-export default ImgSlid
+export default ImgSlid;

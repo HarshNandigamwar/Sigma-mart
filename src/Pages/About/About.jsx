@@ -9,6 +9,7 @@ function About() {
       <div className=" flex flex-col-reverse lg:flex-row items-center ">
         <div className="md:w-[40vw] lg:w-50vw] flex flex-col justify-center items-center gap-3 ">
           <h1 className=" heading text-5xl font-bold lg:text-6xl text-[#ff9550]  ">
+            {/* Header */}
             About SigmaMart
           </h1>
           <p className=" para text-xl mb-4">

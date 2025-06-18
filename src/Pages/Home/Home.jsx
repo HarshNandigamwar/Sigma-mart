@@ -11,10 +11,11 @@ function Home() {
   const [shirts, setshirts] = useState([]);
   const [laptops, setlaptops] = useState([]);
   const [beautys, setbeautys] = useState([]);
-  const [loadingone, setloadingone] = useState(true);
+  const [loadingone, setloadingone] = useState(true);  
 
   // Fetching phones
 
+  // Getting data from API of smartphone
   useEffect(() => {
     fetch("https://dummyjson.com/products/category/smartphones")
       .then((res) => res.json())
@@ -30,6 +31,7 @@ function Home() {
 
   // Fetching shirt
 
+  // Geting data from API of mens-shirts.
   useEffect(() => {
     fetch("https://dummyjson.com/products/category/mens-shirts")
       .then((res) => res.json())
@@ -40,6 +42,7 @@ function Home() {
 
   // Fetching laptops
 
+  // Getting data from API of laptops
   useEffect(() => {
     fetch("https://dummyjson.com/products/category/laptops")
       .then((res) => res.json())
@@ -50,6 +53,7 @@ function Home() {
 
   // Fetching beauty
 
+  // Getting data from API of beauty.
   useEffect(() => {
     fetch("https://dummyjson.com/products/category/beauty")
       .then((res) => res.json())
@@ -60,25 +64,29 @@ function Home() {
 
   const navigate = useNavigate();
 
+  // Forward to product page with product ID
   const handleClick = (id) => {
     navigate(`/product/${id}`);
   };
 
   return (
     <>
+      {/* Display Loader */}
       {loadingone ? (
         <Loader />
       ) : (
         <div className="HomePage ">
+          {/* Display Sliding images  */}
           <ImgSlid />
           <div className=" bg-yellow-50 mainBody">
             <div>
-              <h1 className="productHeading text-center text-3xl font-bold">
+              <h1 className=" heading productHeading text-center text-3xl font-bold">
+                {/* Products heading */}
                 Premium Mobile Phones
               </h1>
               <hr />
               <div className=" w-full grid gap-y-2 gap-x-1 md:gap-5 xl:gap-10 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center">
-                {/* Display phone   */}
+                {/* Display phones information using loops   */}
                 {phones.map((phone) => (
                   <ProductCard
                     key={phone.id}
@@ -91,7 +99,7 @@ function Home() {
                 ))}
               </div>
 
-              <h1 className="productHeading text-center text-3xl font-bold">
+              <h1 className=" heading productHeading text-center text-3xl font-bold">
                 {" "}
                 Trending Laptops
               </h1>
@@ -110,7 +118,7 @@ function Home() {
                 ))}
               </div>
 
-              <h1 className="productHeading text-center text-3xl font-bold">
+              <h1 className=" heading productHeading text-center text-3xl font-bold">
                 {" "}
                 Exclusive Shirts
               </h1>
@@ -130,7 +138,7 @@ function Home() {
                 ))}
               </div>
 
-              <h1 className="productHeading text-center text-3xl font-bold">
+              <h1 className=" heading productHeading text-center text-3xl font-bold">
                 {" "}
                 Beauty Products
               </h1>

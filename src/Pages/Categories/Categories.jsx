@@ -4,10 +4,10 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 function Categories() {
   const navigate = useNavigate();
+  // Forward to categoriesdetail with categorie data.
   const CategorieClick = (categorie) => {
     navigate(`/categoriesDetail/${categorie}`);
   };
-
   return (
     <div>
       <div
@@ -19,7 +19,7 @@ function Categories() {
             Categories
           </h1>
         </div>
-
+        {/* Smartphone card */}
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 items-center gap-5 xl:gap-10">
           <div
             className=" categoriesCard cards h-auto w-[40vw] md:w-[20vw] border-2 border-gray-400  cursor-pointer xl:w-55 flex flex-col items-center gap-3 xl:gap-4 rounded-xl bg-amber-600 text-black "
@@ -36,6 +36,7 @@ function Categories() {
             </h1>
           </div>
 
+          {/* Laptops card */}
           <div
             className=" categoriesCard cards h-auto w-[40vw] md:w-[20vw] border-2 border-gray-400  cursor-pointer xl:w-55 flex flex-col items-center gap-3 xl:gap-4 rounded-xl bg-amber-600 text-black "
             onClick={() => CategorieClick("laptops")}
@@ -51,6 +52,7 @@ function Categories() {
             </h1>
           </div>
 
+          {/* Shirts card */}
           <div
             className=" categoriesCard cards h-auto w-[40vw] md:w-[20vw] border-2 border-gray-400  cursor-pointer xl:w-55 flex flex-col items-center gap-3 xl:gap-4 rounded-xl bg-amber-600 text-black "
             onClick={() => CategorieClick("mens-shirts")}
@@ -67,6 +69,7 @@ function Categories() {
             </h1>
           </div>
 
+          {/* Tops card */}
           <div
             className=" categoriesCard cards h-auto w-[40vw] md:w-[20vw] border-2 border-gray-400  cursor-pointer xl:w-55 flex flex-col items-center gap-3 xl:gap-4 rounded-xl bg-amber-600 text-black "
             onClick={() => CategorieClick("tops")}
@@ -83,6 +86,7 @@ function Categories() {
             </h1>
           </div>
 
+          {/* Watch card */}
           <div
             className=" categoriesCard cards h-auto w-[40vw] md:w-[20vw] border-2 border-gray-400  cursor-pointer xl:w-55 flex flex-col items-center gap-3 xl:gap-4 rounded-xl bg-amber-600 text-black "
             onClick={() => CategorieClick("mens-watches")}
@@ -99,6 +103,7 @@ function Categories() {
             </h1>
           </div>
 
+          {/* Shoes card */}
           <div
             className=" categoriesCard cards h-auto w-[40vw] md:w-[20vw] border-2 border-gray-400  cursor-pointer xl:w-55 flex flex-col items-center gap-3 xl:gap-4 rounded-xl bg-amber-600 text-black "
             onClick={() => CategorieClick("womens-shoes")}
@@ -115,6 +120,7 @@ function Categories() {
             </h1>
           </div>
 
+          {/* SkinCare card */}
           <div
             className=" categoriesCard cards h-auto w-[40vw] md:w-[20vw] border-2 border-gray-400  cursor-pointer xl:w-55 flex flex-col items-center gap-3 xl:gap-4 rounded-xl bg-amber-600 text-black "
             onClick={() => CategorieClick("skin-care")}
@@ -131,6 +137,7 @@ function Categories() {
             </h1>
           </div>
 
+          {/* Furniture card */}
           <div
             className=" categoriesCard cards h-auto w-[40vw] md:w-[20vw] border-2 border-gray-400  cursor-pointer xl:w-55 flex flex-col items-center gap-3 xl:gap-4 rounded-xl bg-amber-600 text-black "
             onClick={() => CategorieClick("furniture")}
@@ -147,6 +154,7 @@ function Categories() {
             </h1>
           </div>
 
+          {/* Sunglasses card */}
           <div
             className=" categoriesCard cards h-auto w-[40vw] md:w-[20vw] border-2 border-gray-400  cursor-pointer xl:w-55 flex flex-col items-center gap-3 xl:gap-4 rounded-xl bg-amber-600 text-black "
             onClick={() => CategorieClick("sunglasses")}
@@ -163,6 +171,7 @@ function Categories() {
             </h1>
           </div>
 
+          {/* Beauty card */}
           <div
             className=" categoriesCard cards h-auto w-[40vw] md:w-[20vw] border-2 border-gray-400  cursor-pointer xl:w-55 flex flex-col items-center gap-3 xl:gap-4 rounded-xl bg-amber-600 text-black "
             onClick={() => CategorieClick("beauty")}
