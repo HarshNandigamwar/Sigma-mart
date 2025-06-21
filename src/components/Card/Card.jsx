@@ -22,14 +22,6 @@ function Card(props) {
           </p>
         </div>
       </NavLink>
-      <div className="btnDiv flex gap-1">
-        <button className="bg-yellow-100 rounded-md  flex items-center justify-center h-[25px] w-[90px] text-[13px] font-bold">
-          Add to cart
-        </button>
-        <button className="bg-yellow-100 rounded-md  flex items-center justify-center h-[25px] w-[90px] text-[13px] font-bold">
-          Buy now
-        </button>
-      </div>
     </card>
   );
 }

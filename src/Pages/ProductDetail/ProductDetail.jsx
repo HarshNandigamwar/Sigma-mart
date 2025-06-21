@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./ProductDetail.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
+import { CartContext } from "../Cart/CartContext";
 const ProductDetail = () => {
   const [info, setinfo] = useState([null]);
   const [loading, setloading] = useState(true);
+  const [mainImg, setmainImg] = useState(null);
   const { id } = useParams();
 
   //  Display data using API
@@ -29,7 +31,7 @@ const ProductDetail = () => {
       ? "bg-yellow-300"
       : "bg-red-600";
 
-      // Going to the top of the page using this function after 1 second.
+  // Going to the top of the page using this function after 1 second.
   function Mypage() {
     useEffect(() => {
       window.scrollTo(0, 0);
@@ -40,10 +42,30 @@ const ProductDetail = () => {
   setTimeout(() => {
     Mypage();
   }, 1000);
+//  change  thumbnail 
+  function ImgOne() {
+    setmainImg(info.images[0]);
+  }
+  function Imgtwo() {
+    setmainImg(info.images[1]);
+  }
+  function Imgthree() {
+    setmainImg(info.images[2]);
+  }
+
+//   const navigate = useNavigate();
+// function cart(id) {
+//   navigate(`/cart/${id}`);
+// }
+
+const {addToCart} = useContext(CartContext)
+
+
+
 
   return (
     <>
-    {/* Display Loader */}
+      {/* Display Loader */}
       {loading ? (
         <Loader />
       ) : (
@@ -53,7 +75,7 @@ const ProductDetail = () => {
               <div className=" mainImg h-[160px] w-[300px] rounded-2xl flex justify-center    bg-yellow-300">
                 {/* Display product thumbnail */}
                 <img
-                  src={info.thumbnail}
+                  src={mainImg ? mainImg : info.thumbnail}
                   className="h-[150px]"
                   alt="N/A"
                   loading="lazy"
@@ -62,13 +84,29 @@ const ProductDetail = () => {
               <div className=" container w-[400px] h-[150px] flex justify-between  ">
                 {/* Display product images */}
                 <div className="item bg-yellow-300  rounded-xl h-[100px] w-[100px] gap-1">
-                  <img src={info.images[0]} alt="N/A" loading="lazy" />
+                  <img
+                    src={info.images[0]}
+                    alt="N/A"
+                    loading="lazy"
+                    onClick={ImgOne}
+                  />
+                </div>
+
+                <div className="item bg-yellow-300 rounded-xl h-[100px] w-[100px] gap-1">
+                  <img
+                    src={info.images[1]}
+                    alt="N/A"
+                    loading="lazy"
+                    onClick={Imgtwo}
+                  />
                 </div>
                 <div className="item bg-yellow-300 rounded-xl h-[100px] w-[100px] gap-1">
-                  <img src={info.images[2]} alt="N/A" loading="lazy" />
-                </div>
-                <div className="item bg-yellow-300 rounded-xl h-[100px] w-[100px] gap-1">
-                  <img src={info.images[1]} alt="N/A" loading="lazy" />
+                  <img
+                    src={info.images[2]}
+                    alt="N/A"
+                    loading="lazy"
+                    onClick={Imgthree}
+                  />
                 </div>
               </div>
             </div>
@@ -87,28 +125,29 @@ const ProductDetail = () => {
               </div>
 
               <div className="flex">
-                <p>Discount</p>{" "}
-                {/* Display discount of product */}
+                <p>Discount</p> {/* Display discount of product */}
                 <p className="text-green-400">{info.discountPercentage} %off</p>
               </div>
               <div className="price text-2xl font-bold">
-                {/* Display price of the product */}
-                ₹ {Math.floor(info.price * 83)}{" "}
+                {/* Display price of the product */}₹{" "}
+                {Math.floor(info.price * 83)}{" "}
               </div>
             </div>
 
             <div className="flex justify-center w-[500px]">
-              <button className="Bone bg-yellow-500 rounded-md  flex items-center justify-center h-[35px] w-[100px] text-[13px] font-bold">
-                Buy now
+            <button className="Bone  bg-yellow-500 rounded-md  flex items-center justify-center h-[35px] w-[100px] text-[13px] font-bold" onClick={() => addToCart(info.id)}>
+                Add to Cart
               </button>
 
               <button className="Buttons bg-yellow-500 rounded-md  flex items-center justify-center h-[35px] w-[100px] text-[13px] font-bold">
-                Add to Cart
+                Buy now
               </button>
+
+             
             </div>
           </div>
 
-          <div className="DetailInfo">
+          <div className="DetailInfo flex flex-col items-center justify-center">
             <div className=" rounded-2xl ">
               <div className="flex bg-[#ff9550] rounded-t-xl">
                 {/* Display category  */}
@@ -143,8 +182,7 @@ const ProductDetail = () => {
               </div>
 
               <div className="flex bg-amber-600">
-                <p className="font-bold">Warrenty </p>{" "}
-                {/* Display warranty */}
+                <p className="font-bold">Warrenty </p> {/* Display warranty */}
                 <p>{info.warrantyInformation} </p>
               </div>
 

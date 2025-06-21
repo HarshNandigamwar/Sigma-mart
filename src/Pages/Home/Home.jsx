@@ -11,45 +11,45 @@ function Home() {
   const [shirts, setshirts] = useState([]);
   const [laptops, setlaptops] = useState([]);
   const [beautys, setbeautys] = useState([]);
-  const [loadingone, setloadingone] = useState(true);  
+  const [loadingone, setloadingone] = useState(false);  
 
   // Fetching phones
 
   // Getting data from API of smartphone
-  useEffect(() => {
-    fetch("https://dummyjson.com/products/category/smartphones")
-      .then((res) => res.json())
-      .then((data) => {
-        setphones(data.products);
-        setloadingone(false);
-      })
-      .catch((err) => {
-        console.error("Error fetching product:", err);
-        setloadingone(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://dummyjson.com/products/category/smartphones")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setphones(data.products);
+  //       setloadingone(false);
+  //     })
+  //     .catch((err) => {
+  //       console.error("Error fetching product:", err);
+  //       setloadingone(false);
+  //     });
+  // }, []);
 
   // Fetching shirt
 
   // Geting data from API of mens-shirts.
-  useEffect(() => {
-    fetch("https://dummyjson.com/products/category/mens-shirts")
-      .then((res) => res.json())
-      .then((data) => {
-        setshirts(data.products);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://dummyjson.com/products/category/mens-shirts")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setshirts(data.products);
+  //     });
+  // }, []);
 
   // Fetching laptops
 
   // Getting data from API of laptops
-  useEffect(() => {
-    fetch("https://dummyjson.com/products/category/laptops")
-      .then((res) => res.json())
-      .then((data) => {
-        setlaptops(data.products);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://dummyjson.com/products/category/laptops")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setlaptops(data.products);
+  //     });
+  // }, []);
 
   // Fetching beauty
 

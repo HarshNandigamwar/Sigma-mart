@@ -15,6 +15,7 @@ import Order from "./Pages/Order/Order.jsx";
 import Home from "./Pages/Home/Home.jsx";
 import CategoriesDetail from "./Pages/CategoriesDetail/CategoriesDetail.jsx";
 import ProductDetail from "./Pages/ProductDetail/ProductDetail.jsx";
+import { CartProvider } from "./Pages/Cart/CartContext.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
@@ -22,7 +23,6 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="categories" element={<Categories />} />
       <Route path="cart" element={<Cart />} />
-     
       <Route path="categoriesDetail/:categorie" element={<CategoriesDetail />} />
 <Route path="/product/:id" element={<ProductDetail/>} />
       <Route path="order" element={<Order />} />
@@ -32,6 +32,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <CartProvider>
     <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>
 );
