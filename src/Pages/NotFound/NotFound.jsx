@@ -7,7 +7,7 @@ const NotFound = () => {
       <div className="text-center">
         <h1 className="text-9xl font-bold text-gray-300 mb-6">409</h1>
         <h2 className="text-3xl font-semibold text-gray-700 mb-4">
-          Page Not Found
+        Product Not Found
         </h2>
         <p className="text-gray-500 mb-6">
           Oops! The Product you're looking for doesn't exist or has been moved.

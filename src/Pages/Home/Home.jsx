@@ -16,18 +16,18 @@ function Home() {
   // Fetching phones
 
   // Getting data from API of smartphone
-  // useEffect(() => {
-  //   fetch("https://dummyjson.com/products/category/smartphones")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setphones(data.products);
-  //       setloadingone(false);
-  //     })
-  //     .catch((err) => {
-  //       console.error("Error fetching product:", err);
-  //       setloadingone(false);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch("https://dummyjson.com/products/category/smartphones")
+      .then((res) => res.json())
+      .then((data) => {
+        setphones(data.products);
+        setloadingone(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching product:", err);
+        setloadingone(false);
+      });
+  }, []);
 
   // Fetching shirt
 
@@ -43,24 +43,24 @@ function Home() {
   // Fetching laptops
 
   // Getting data from API of laptops
-  // useEffect(() => {
-  //   fetch("https://dummyjson.com/products/category/laptops")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setlaptops(data.products);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch("https://dummyjson.com/products/category/laptops")
+      .then((res) => res.json())
+      .then((data) => {
+        setlaptops(data.products);
+      });
+  }, []);
 
   // Fetching beauty
 
   // Getting data from API of beauty.
-  // useEffect(() => {
-  //   fetch("https://dummyjson.com/products/category/beauty")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setbeautys(data.products);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch("https://dummyjson.com/products/category/beauty")
+      .then((res) => res.json())
+      .then((data) => {
+        setbeautys(data.products);
+      });
+  }, []);
 
   const navigate = useNavigate();
 
