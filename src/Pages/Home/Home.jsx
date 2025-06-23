@@ -11,7 +11,7 @@ function Home() {
   const [shirts, setshirts] = useState([]);
   const [laptops, setlaptops] = useState([]);
   const [beautys, setbeautys] = useState([]);
-  const [loadingone, setloadingone] = useState(false);
+  const [loadingone, setloadingone] = useState(true);
 
   // Fetching phones
 
