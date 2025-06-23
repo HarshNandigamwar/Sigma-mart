@@ -2,3 +2,55 @@
     width: 100vw;
     overflow-x: hidden;
 }
+
+.ordarMainDiv{
+    background-color: #ff9550;
+    padding: 10px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+}
+.ordarImg{
+    background-color: red;
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.NameDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

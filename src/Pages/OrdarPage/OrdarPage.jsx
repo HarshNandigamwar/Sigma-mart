@@ -5,10 +5,10 @@ import Loader from "../../components/Loader/Loader";
 const OrdarPage = () => {
   const [loading, setloading] = useState(true);
   const [ordar, setordar] = useState([null]);
-  const [quantity, setquantity] = useState(1)
+  const [quantity, setquantity] = useState(1);
   const { id } = useParams();
   const navigate = useNavigate();
-let itemPrice
+  let itemPrice;
   useEffect(() => {
     fetch(`https://dummyjson.com/products/${id}`)
       .then((res) => res.json())
@@ -22,21 +22,20 @@ let itemPrice
       });
   }, []);
 
-const handleChange = (e) => {
-  const qty = parseInt(e.target.value);
-  setquantity(qty)
-}
-itemPrice =  Math.floor(ordar.price * 83)
-const totalPrice = itemPrice*quantity
+  const handleChange = (e) => {
+    const qty = parseInt(e.target.value);
+    setquantity(qty);
+  };
+  itemPrice = Math.floor(ordar.price * 83);
+  const totalPrice = itemPrice * quantity;
 
   function Place() {
-for (let i = 0; i < 20; i++) {
-  confetti();
-}
-localStorage.setItem("id", id);
-setTimeout(() => {
-  navigate(`/ordar`);
-}, 1000);
+    for (let i = 0; i < 20; i++) {
+      confetti();
+    }
+    setTimeout(() => {
+      navigate(`/ordar/${id}`);
+    }, 1000);
   }
 
   return (
@@ -62,7 +61,13 @@ setTimeout(() => {
               className="name1"
             ></textarea>
 
-            <input type="number" name="Quantity" className="name1" value={quantity} onChange={handleChange} />
+            <input
+              type="number"
+              name="Quantity"
+              className="name1"
+              value={quantity}
+              onChange={handleChange}
+            />
 
             <select name="payment" className="name1 op">
               <option value="cash-on-delivery">Cash on Delivery</option>
@@ -71,10 +76,11 @@ setTimeout(() => {
             </select>
           </form>
 
-<div className="bg-amber-600 price"> {totalPrice} </div>
+          <div className="bg-amber-600 price"> {totalPrice} </div>
 
-<button className="Placebtn" onClick={Place}>Place Ordar</button>
-
+          <button className="Placebtn" onClick={Place}>
+            Place Ordar
+          </button>
         </div>
       )}
     </div>

@@ -30,7 +30,8 @@ const router = createBrowserRouter(
         element={<CategoriesDetail />}
       />
       <Route path="/product/:id" element={<ProductDetail />} />
-      <Route path="ordar" element={<Ordar />} />
+      <Route path="ordar/:id" element={<Ordar />} />
+      
     </Route>
   )
 );

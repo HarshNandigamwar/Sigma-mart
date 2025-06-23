@@ -79,12 +79,7 @@ function Header() {
                 Cart
               </li>
             </NavLink>
-            {/* Forward to order page */}
-            <NavLink to={"/order"} className="Navlink">
-              <li className="li" onClick={() => setShowMenu(false)}>
-                Order
-              </li>
-            </NavLink>
+
             {/* Forward to about page */}
             <NavLink to={"/about"} className="Navlink">
               <li className="li" onClick={() => setShowMenu(false)}>
