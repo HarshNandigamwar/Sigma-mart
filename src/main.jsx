@@ -11,8 +11,9 @@ import Layout from "./Layout.jsx";
 import About from "./Pages/About/About.jsx";
 import Categories from "./Pages/Categories/Categories.jsx";
 import Cart from "./Pages/Cart/Cart.jsx";
-import Order from "./Pages/Order/Order.jsx";
+import Ordar from "./Pages/Ordar/Ordar.jsx";
 import Home from "./Pages/Home/Home.jsx";
+import OrdarPage from "./Pages/OrdarPage/OrdarPage.jsx";
 import CategoriesDetail from "./Pages/CategoriesDetail/CategoriesDetail.jsx";
 import ProductDetail from "./Pages/ProductDetail/ProductDetail.jsx";
 import { CartProvider } from "./Pages/Cart/CartContext.jsx";
@@ -23,9 +24,13 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="categories" element={<Categories />} />
       <Route path="cart" element={<Cart />} />
-      <Route path="categoriesDetail/:categorie" element={<CategoriesDetail />} />
-<Route path="/product/:id" element={<ProductDetail/>} />
-      <Route path="order" element={<Order />} />
+      <Route path="ordarpage/:id" element={<OrdarPage />} />
+      <Route
+        path="categoriesDetail/:categorie"
+        element={<CategoriesDetail />}
+      />
+      <Route path="/product/:id" element={<ProductDetail />} />
+      <Route path="ordar" element={<Ordar />} />
     </Route>
   )
 );
@@ -33,7 +38,7 @@ const router = createBrowserRouter(
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <CartProvider>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </CartProvider>
   </StrictMode>
 );

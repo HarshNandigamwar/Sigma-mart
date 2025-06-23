@@ -13,7 +13,7 @@ function Cart() {
         Cart Page
       </h1>
       {cart.length === 0 ? (
-        <p>No items in cart.</p>
+        <p>No items in cart. 🙃</p>
       ) : (
         <ul>
           {cart.map((item) => (
@@ -32,7 +32,7 @@ function Cart() {
                   <p className=" disc text-[11px] ">{item.description}</p>
 
                   <div className="flex gap-6 items-center">
-                    <p>₹{item.price}</p>
+                    <p>₹{Math.floor(item.price * 83)}</p>
                     <button
                       onClick={() => removeFromCart(item.id)}
                       className=" bg-green-500 text-white rounded  h-[30px] w-[70px] border        "

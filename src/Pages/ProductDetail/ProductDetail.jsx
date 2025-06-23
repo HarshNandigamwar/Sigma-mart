@@ -42,7 +42,7 @@ const ProductDetail = () => {
   setTimeout(() => {
     Mypage();
   }, 1000);
-//  change  thumbnail 
+  //  change  thumbnail
   function ImgOne() {
     setmainImg(info.images[0]);
   }
@@ -53,15 +53,21 @@ const ProductDetail = () => {
     setmainImg(info.images[2]);
   }
 
-//   const navigate = useNavigate();
-// function cart(id) {
-//   navigate(`/cart/${id}`);
-// }
+  const navigate = useNavigate();
+  function orderpage(id) {
+    navigate(`/ordarpage/${id}`);
+  }
 
-const {addToCart} = useContext(CartContext)
-
-
-
+  const { addToCart } = useContext(CartContext);
+  const { message, clearMessage } = useContext(CartContext);
+  useEffect(() => {
+    if (message) {
+      const timer = setTimeout(() => {
+        clearMessage();
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [message, clearMessage]);
 
   return (
     <>
@@ -134,16 +140,21 @@ const {addToCart} = useContext(CartContext)
               </div>
             </div>
 
+            <div className="messageDiv bg-yellow-50">{message}</div>
             <div className="flex justify-center w-[500px]">
-            <button className="Bone  bg-yellow-500 rounded-md  flex items-center justify-center h-[35px] w-[100px] text-[13px] font-bold" onClick={() => addToCart(info.id)}>
+              <button
+                className="Bone  bg-yellow-500 rounded-md  flex items-center justify-center h-[35px] w-[100px] text-[13px] font-bold"
+                onClick={() => addToCart(info.id)}
+              >
                 Add to Cart
               </button>
 
-              <button className="Buttons bg-yellow-500 rounded-md  flex items-center justify-center h-[35px] w-[100px] text-[13px] font-bold">
+              <button
+                className="Buttons bg-yellow-500 rounded-md  flex items-center justify-center h-[35px] w-[100px] text-[13px] font-bold"
+                onClick={() => orderpage(info.id)}
+              >
                 Buy now
               </button>
-
-             
             </div>
           </div>
 
@@ -182,7 +193,7 @@ const {addToCart} = useContext(CartContext)
               </div>
 
               <div className="flex bg-amber-600">
-                <p className="font-bold">Warrenty </p> {/* Display warranty */}
+                <p className="font-bold">Warranty </p> {/* Display warranty */}
                 <p>{info.warrantyInformation} </p>
               </div>
 

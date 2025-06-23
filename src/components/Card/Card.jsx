@@ -11,7 +11,11 @@ function Card(props) {
       <NavLink to={"/"}>
         {/* Updating all data with the help of props */}
         <div className="flex items-center justify-center bg-[#ff9550] rounded-[10px]">
-          <img src={props.image} className="h-[90%] lg:h-4=40 rounded-2xl" />
+          <img
+            src={props.image}
+            className="h-[90%] lg:h-4=40 rounded-2xl"
+            loading="lazy"
+          />
         </div>
         <div>
           <p>{props.productTitle.slice(0, 15)} </p>

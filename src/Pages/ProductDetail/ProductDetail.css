@@ -47,7 +47,12 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 0 10px #faf3e0;
 }
-
+.messageDiv{
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  color: blue;
+}
 @media screen and (max-width: 840px) {
   .DetailInfo {
     width: 430px;

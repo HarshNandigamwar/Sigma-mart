@@ -1,6 +1,9 @@
 #body {
   width: 100vw;
   overflow-x: hidden;
+  position: sticky;
+  /* bottom: 0; */
+
 }
 .FooterPage {
   padding: 20px;

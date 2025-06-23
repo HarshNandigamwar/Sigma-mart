@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Header.css";
 import Cart from "../../assets/cart.png";
 import Menu from "../../assets/menu.png";
+import { CartContext } from "../../Pages/Cart/CartContext";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -13,6 +14,8 @@ function Header() {
     // Input value forward to the categoriesdetail section.
     navigate(`/categoriesDetail/${inputValue}`);
   }
+
+  const { cart, removeFromCart } = useContext(CartContext);
 
   return (
     <header className="header">
@@ -41,9 +44,9 @@ function Header() {
         {/* Forward to Cart page */}
         <NavLink to={"/cart"} className="Navlink">
           <div className="cart">
-            <img className="cartImg" src={Cart} />
+            <img className="cartImg" src={Cart} loading="lazy" />
             {/* Cart item number display */}
-            Cart <p className="cartNum">0</p>
+            Cart <p className="cartNum">{cart.length}</p>
           </div>
         </NavLink>
         {/* Side menu open after click */}

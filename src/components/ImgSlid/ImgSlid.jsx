@@ -10,16 +10,16 @@ const ImgSlid = () => {
     <div className="slider">
       <figure>
         <div className="slide">
-          <img src={Img1} alt="" />
+          <img src={Img1} alt="N/A" loading="lazy" />
         </div>
         <div className="slide">
-          <img src={Img2} alt="" />
+          <img src={Img2} alt="N/A" loading="lazy" />
         </div>
         <div className="slide">
-          <img src={Img3} alt="" />
+          <img src={Img3} alt="N/A" loading="lazy" />
         </div>
         <div className="slide">
-          <img src={Img4} alt="" />
+          <img src={Img4} alt="N/A" loading="lazy" />
         </div>
       </figure>
     </div>

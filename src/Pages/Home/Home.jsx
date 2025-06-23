@@ -11,7 +11,7 @@ function Home() {
   const [shirts, setshirts] = useState([]);
   const [laptops, setlaptops] = useState([]);
   const [beautys, setbeautys] = useState([]);
-  const [loadingone, setloadingone] = useState(false);  
+  const [loadingone, setloadingone] = useState(false);
 
   // Fetching phones
 
@@ -32,13 +32,13 @@ function Home() {
   // Fetching shirt
 
   // Geting data from API of mens-shirts.
-  // useEffect(() => {
-  //   fetch("https://dummyjson.com/products/category/mens-shirts")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setshirts(data.products);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch("https://dummyjson.com/products/category/mens-shirts")
+      .then((res) => res.json())
+      .then((data) => {
+        setshirts(data.products);
+      });
+  }, []);
 
   // Fetching laptops
 
@@ -54,13 +54,13 @@ function Home() {
   // Fetching beauty
 
   // Getting data from API of beauty.
-  useEffect(() => {
-    fetch("https://dummyjson.com/products/category/beauty")
-      .then((res) => res.json())
-      .then((data) => {
-        setbeautys(data.products);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://dummyjson.com/products/category/beauty")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setbeautys(data.products);
+  //     });
+  // }, []);
 
   const navigate = useNavigate();
 
