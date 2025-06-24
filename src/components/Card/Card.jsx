@@ -21,7 +21,7 @@ function Card(props) {
           <p>{props.productTitle.slice(0, 15)} </p>
           <p>
             {" "}
-            {props.price} ₹{" "}
+            ₹ {props.price}{" "}
             <span className="text-lime-400"> {props.discount} %off </span>{" "}
           </p>
         </div>

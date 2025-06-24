@@ -19,15 +19,17 @@ function Categories() {
             Categories
           </h1>
         </div>
-        {/* Smartphone card */}
+      
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 items-center gap-5 xl:gap-10">
+          
+            {/* Smartphone card */}
           <div
             className=" categoriesCard cards h-auto w-[40vw] md:w-[20vw] border-2 border-gray-400  cursor-pointer xl:w-55 flex flex-col items-center gap-3 xl:gap-4 rounded-xl bg-amber-600 text-black "
             onClick={() => CategorieClick("smartphones")}
           >
             <div className="bg-[#ff9550] w-full flex items-center justify-center h-[100px] rounded-2xl ">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzz-BMw0YuFoRAO-GdibhH0IXMSHTAsp5qrg&s"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5oXgefqCBBYEo2mVX1wamL6vihMCA7Echsg&s"
                 className="h-[85px] rounded-xl "
                 loading="lazy"
               />
@@ -44,7 +46,7 @@ function Categories() {
           >
             <div className="bg-[#ff9550] w-full flex items-center justify-center h-[100px] rounded-2xl ">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSQBRR3FLSHgm2_xeA-xHHjBuzg4Sl83o15A&s"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnygfCfIcGZlkA0LQ12dKJuxvN6KhA3GqADvtk_Q-5DA&s"
                 className="h-[85px] rounded-xl "
                 loading="lazy"
               />
@@ -61,7 +63,7 @@ function Categories() {
           >
             <div className="bg-[#ff9550] w-full flex items-center justify-center h-[100px] rounded-2xl ">
               <img
-                src="  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl3rxwb-7ShSqRBDIqvUtc3g3IVgP8Npq4dg&s "
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQde42ALoiRVeyGGoEsSxGyCl0pOuYVNXtV1tzAlq8NMsjzkDqnfteT87sJ&s=10"
                 className="h-[85px] rounded-xl "
                 loading="lazy"
               />
@@ -79,7 +81,7 @@ function Categories() {
           >
             <div className="bg-[#ff9550] w-full flex items-center justify-center h-[100px] rounded-2xl ">
               <img
-                src="  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-zssGorE7hUyUtguwpbGA4jcWUnId2kzzqg&s "
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt64eiM-HBfUReB_zg4gkzpsTy5CEFv2moZwtd7YedIQ&s"
                 className="h-[85px] rounded-xl "
                 loading="lazy"
               />
@@ -97,7 +99,7 @@ function Categories() {
           >
             <div className="bg-[#ff9550] w-full flex items-center justify-center h-[100px] rounded-2xl ">
               <img
-                src="  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5t6i8FV811kmnmPI6_ynSI03stc4r1QK4Uw&s "
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUw9_XdHCZJk7AQDPYEp3eHFLZysNnY1rZyMbcYcBfLw&s"
                 className="h-[85px] rounded-xl "
                 loading="lazy"
               />
@@ -115,7 +117,7 @@ function Categories() {
           >
             <div className="bg-[#ff9550] w-full flex items-center justify-center h-[100px] rounded-2xl ">
               <img
-                src="  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs0YJKfhxISSNf20EREkud5j5AgrCKVd9KMg&s "
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbG3DN-u_-VIpCtuuUWa0DcqWLJvRS0GQnxsRFZyIetw&s"
                 className="h-[85px] rounded-xl "
                 loading="lazy"
               />
@@ -133,7 +135,7 @@ function Categories() {
           >
             <div className="bg-[#ff9550] w-full flex items-center justify-center h-[100px] rounded-2xl ">
               <img
-                src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJVh1RpLm3d5eTupBsis-_s2vobi_c9pyI1w&s  "
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUAR_6BGJNaqt-WvPqFdeOmhkBKTwrTBeDBDI1yfcAuA&s"
                 className="h-[85px] rounded-xl "
                 loading="lazy"
               />
@@ -151,7 +153,7 @@ function Categories() {
           >
             <div className="bg-[#ff9550] w-full flex items-center justify-center h-[100px] rounded-2xl ">
               <img
-                src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD4v724bT3GOIEmH4O5kJMyveIWqE96EhOjw&s  "
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdSdZ3C2-HjEm3k-VHwschA1PVhWcXjpZ0wRjlCD0-RQ&s"
                 className="h-[85px] rounded-xl "
                 loading="lazy"
               />
@@ -169,7 +171,7 @@ function Categories() {
           >
             <div className="bg-[#ff9550] w-full flex items-center justify-center h-[100px] rounded-2xl ">
               <img
-                src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7osuNJoP5cswSAfKEX0iiq_fFermh4GnIXw&s  "
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv8IK_-dvQcs4YQJTDFVfrbOJij_rGqDeyM5sQoBJxtA&s"
                 className="h-[85px] rounded-xl "
                 loading="lazy"
               />
@@ -187,7 +189,7 @@ function Categories() {
           >
             <div className="bg-[#ff9550] w-full flex items-center justify-center h-[100px] rounded-2xl ">
               <img
-                src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLYpARhLrF-b7hD7Cn2aueGKDya0PRTso9wQ&s  "
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwS7J3ImuoUdT4s0JZwVyFpc4NYXRmizYzIbqZUfJ2Vg&s "
                 className="h-[85px] rounded-xl "
                 loading="lazy"
               />

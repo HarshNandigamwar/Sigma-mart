@@ -28,7 +28,7 @@ function Header() {
             <input
               className="input flex bg-white w-[40vw] h-9 rounded-l-[6px] px-2 text-[18px] lg:text-xl"
               type="text"
-              placeholder="Search..."
+              placeholder="Search"
               value={inputValue}
               // Targeting input value
               onChange={(e) => setInputValue(e.target.value)}

@@ -23,13 +23,16 @@ function Order() {
       {loading ? (
         <Loader />
       ) : (
-        <div className="ordarMainDiv">
-          <div className="ordarImg">
-            <img src={ordar.thumbnail} alt="N/A" className="h-[80px]" />
-          </div>
-          <div>
-            <div className="NameDiv">{ordar.title}</div>
-            <div>Your order has been shipped</div>
+        <div className="flex flex-col items-center justify-center">
+          <div className="ordarMainDiv">
+            <div className="ordarImg">
+              <img src={ordar.thumbnail} alt="N/A" className="h-[80px]" />
+            </div>
+            <div>
+              <div className="NameDiv">{ordar.title}</div>
+              <div>Your order has been shipped</div>
+              <div>will be delivered in 5 days.</div>
+            </div>
           </div>
         </div>
       )}

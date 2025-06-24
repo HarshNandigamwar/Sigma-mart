@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./Cart.css";
-import { useParams } from "react-router-dom";
-import Loader from "../../components/Loader/Loader";
+import { useNavigate, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 
 function Cart() {
   const { cart, removeFromCart } = useContext(CartContext);
+
+  const navigate = useNavigate();
+  function orderpage(id) {
+    navigate(`/ordarpage/${id}`);
+  }
+
   return (
     <div className="cartDiv flex flex-col items-center">
       <h1 className=" cartHeading text-3xl font-bold text-center ">
@@ -32,10 +37,10 @@ function Cart() {
                   <p className=" disc text-[11px] ">{item.description}</p>
 
                   <div className="flex gap-6 items-center">
-                    <p>₹{Math.floor(item.price * 83)}</p>
+                    <p>₹ {Math.floor(item.price * 83)}</p>
                     <button
-                      onClick={() => removeFromCart(item.id)}
-                      className=" bg-green-500 text-white rounded  h-[30px] w-[70px] border        "
+                      onClick={() => orderpage(item.id)}
+                      className=" bg-green-500 text-white rounded  h-[30px] w-[70px] border"
                     >
                       Buy Now
                     </button>
