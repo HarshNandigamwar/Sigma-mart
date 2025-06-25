@@ -87,7 +87,7 @@ const ProductDetail = () => {
                   loading="lazy"
                 />
               </div>
-              <div className=" container w-[400px] h-[150px] flex justify-between  ">
+              <div className=" container w-[400px] h-[150px] flex justify-between lg:gap-[10px]  ">
                 {/* Display product images */}
                 <div className="item bg-yellow-300  rounded-xl h-[100px] w-[100px] gap-1">
                   <img
