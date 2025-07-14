@@ -13,7 +13,7 @@ This is a dynamic E-Commerce web application built with React.js, designed to de
 - **Frontend**: React.js & Tailwind CSS
 - **Hosting**: Netlify Hosting
 
-  The app will be available at `https://sigmamart.netlify.app/`.
+  The app will be available at `https://sigma-mart.vercel.app/`.
 
 ---
 
