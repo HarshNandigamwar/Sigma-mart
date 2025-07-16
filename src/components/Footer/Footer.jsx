@@ -16,10 +16,7 @@ function Footer() {
           <p>Cart Products</p>
         </NavLink>
 
-        <NavLink to={"/order"}>
-        {/* Forward to Order Page */}
-          <p>Order Tracking</p>
-        </NavLink>
+        
 
         <h1 className=" text-2xl font-bold text-black">Contact Me </h1>
         <p>
