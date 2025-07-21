@@ -52,13 +52,13 @@ const OrdarPage = () => {
           <h3 className="text-2xl title">{ordar.title}</h3>
 
           <form action="" className="bg-amber-600 form">
-            <input type="text" placeholder="Name" className="name1" />
+            <input type="text" placeholder="Name" className="name1" required />
 
             <textarea
               name="address"
               rows={4}
               placeholder="Enter full address"
-              className="name1"
+              className="name1" required
             ></textarea>
 
             <input
@@ -76,7 +76,7 @@ const OrdarPage = () => {
             </select>
           </form>
 
-          <div className="bg-amber-600 price"> {totalPrice} </div>
+          <div className="bg-amber-600 price"> {totalPrice} ₹ </div>
 
           <button className="Placebtn" onClick={Place}>
             Place Ordar
