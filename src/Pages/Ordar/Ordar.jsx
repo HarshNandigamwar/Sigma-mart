@@ -23,7 +23,7 @@ function Order() {
       {loading ? (
         <Loader />
       ) : (
-        <div className="flex flex-col bg-amber-400 items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
           <div className="ordarMainDiv">
             <div className="ordarImg">
               <img src={ordar.thumbnail} alt="N/A" className="h-[80px]" />
