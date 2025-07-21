@@ -157,7 +157,7 @@ const ProductDetail = () => {
               </button>
             </div>
           </div>
-//info Table
+          {/*info Table*/}
           <div className="DetailInfo flex flex-col items-center justify-center">
             <div className=" rounded-2xl ">
               <div className="flex bg-[#ff9550] rounded-t-xl">
